@@ -1,0 +1,16 @@
+include ../../components/modal/modal.pug 
+include ../../components/preloader/index.pug 
+
++yaModal()
+  p.error Ой, этой страницы пока нет, доступны ссылки на другие страницы и примерный вид будущего лоадера
+  nav 
+    div 
+      a(href='/viewProfile') Настройка профиля
+    div
+      a(href='/404') Страница 404
+    div
+      a(href='/500') Страница 500
+    div
+      a(href='/login') Назад к логину
+
+  +yaLoader()

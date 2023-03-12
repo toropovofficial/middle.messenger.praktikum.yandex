@@ -1,0 +1,23 @@
+.input {
+  height: 22px;
+  padding: 10px 21px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+
+  &::placeholder {
+    font-weight: normal;
+    font-size: 14px;
+    color: #938C8C;
+  }
+
+  &:disabled {
+    background: none;
+  }
+}
+
+.rtl {
+  direction: rtl;
+}

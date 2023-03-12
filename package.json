@@ -1,0 +1,54 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "source": "static/index.html",
+  "scripts": {
+    "start": "parcel  --port 3000 --open",
+    "build": "parcel build static/index.html"
+  },
+  "parcel-namer-struct": [
+    {
+      "type": [
+        "scss",
+        "css"
+      ],
+      "dest": "/styles/"
+    }
+  ],
+  "keywords": [],
+  "engines": {
+    "node": "16.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "assert": "^2.0.0",
+    "buffer": "^5.7.1",
+    "express": "^4.18.2",
+    "fs": "*",
+    "fs-filesystem": "^2.1.2",
+    "jstransformer-uglify-js": "^1.2.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.8.3",
+    "parcel-plugin-asset-fourohfour": "^0.1.13",
+    "parcel-plugin-at-alias": "^0.15.0",
+    "parcel-resolver-ignore": "^2.1.3",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "sass": "^1.59.2"
+  },
+  "alias": {
+    "@components": "./src/components"
+  },
+  "dependencies": {
+    "@parcel/transformer-pug": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "dart-sass": "^1.25.0",
+    "fs": "*",
+    "parcel-plugin-change-file": "^1.3.0",
+    "sass": "^1.59.2"
+  }
+}

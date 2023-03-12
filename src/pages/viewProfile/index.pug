@@ -1,0 +1,20 @@
+include ../../components/input/input.pug 
+include ../../components/profileForm/index.pug
+
+
+section.profile 
+  .profile__avatar
+
+  .profile__name Игорь
+
+  .profile__data
+    +yaProfileForm('disabled')
+
+  .profile__actions
+    a.profile__change_data.link(href="/changeProfile") Изменить данные
+
+    a.profile__change_password.link(href="/changePassword") Изменить пароль
+
+    a.profile__exit.error(href="/login") Выйти
+
+

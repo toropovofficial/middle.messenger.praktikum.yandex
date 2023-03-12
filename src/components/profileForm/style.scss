@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+
+.profile {
+  min-width: 510px;
+  min-height: 257;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+  &__avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-image: url('../../../static/icons/avatar.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 21px;
+  }
+  &__name {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 60px;
+  }
+  &__data {
+    width: 100%;
+  }
+  &__data__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $base-color;
+    margin-bottom: 10px;
+  }
+
+  &__actions {
+    width: 100%;
+    button {
+      margin: 0 auto;
+    }
+  }
+
+  &__change_data {
+    display: block;
+    margin-bottom: 21px;
+    cursor: pointer;
+  }
+
+  &__change_password {
+    display: block;
+    margin-bottom: 21px;
+    cursor: pointer;
+  }
+}

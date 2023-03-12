@@ -1,0 +1,57 @@
+
+include ../modal/modal.pug
+include ../field/field.pug
+include ../checkbox/checkbox.pug
+include ../button/button.pug
+
+
+mixin yaAuth(auth)
+   +yaModal()
+      if auth == 'login'
+        h1.title Входa
+        form(action='/chat')
+          div.field__wrapper
+            +yaField('user', 'Логин', 'text', false, 'login')
+
+          div.field__wrapper
+            +yaField('user', 'Пароль', 'password', false, 'password')
+
+          div.checkbox__wrapper
+            +yaCheckbox('Запомнить меня')
+
+          div.button__wrapper
+            +yaButton('Войти', 'submit')
+
+        div.create__account__link
+          a.link.link__create(href="/registration") Нет аккаунта?
+
+      else
+        h1.title Регистрация
+
+        form(action='/chat')
+          div.field__wrapper
+            +yaField('user', 'Почта', 'email', false, 'email')
+
+          div.field__wrapper
+            +yaField('user', 'Логин', 'text', false, 'login')
+
+          div.field__wrapper
+            +yaField('user', 'Имя', 'text', false, 'first_name')
+
+          div.field__wrapper
+            +yaField('user', 'Фамилия', 'text', false, 'second_name')
+
+          div.field__wrapper
+            +yaField('user', 'Телефон', 'tel', false, 'phone')
+
+          div.field__wrapper
+            +yaField('user', 'Пароль', 'password', false, 'password')
+
+          div.field__wrapper
+            +yaField('user', 'Пароль (еще раз)', 'password')
+
+          div.button__wrapper
+            +yaButton('Зарегистрироваться', 'submit')
+
+        div.create__account__link
+          a.link.link__create(href="/login") Войти

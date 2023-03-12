@@ -1,0 +1,7 @@
+include ../icon/icon.pug
+include ../input/input.pug
+
+mixin yaField(iconName, placeholder, type, disabled=false, inputName)
+  .field
+    +yaIcon(iconName)
+    +yaInput(placeholder, type, disabled, '', '', inputName)

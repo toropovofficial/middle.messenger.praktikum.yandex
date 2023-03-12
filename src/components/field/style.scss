@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+
+.field {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $base-color;
+}

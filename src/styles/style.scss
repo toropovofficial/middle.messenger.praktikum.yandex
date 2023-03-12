@@ -1,0 +1,45 @@
+@import './variables';
+@import url('../components/button/style.scss');
+@import url('../components/modal/style.scss');
+@import url('../components/input/style.scss');
+@import url('../components/icon/style.scss');
+@import url('../components/field/style.scss');
+@import url('../components/checkbox/style.scss');
+@import url('../components/auth/style.scss');
+@import url('../components/errorPage/style.scss');
+@import url('../components/preloader/style.scss');
+@import url('../components/profileForm/style.scss');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 21px;
+  color: $h1-color;
+}
+
+.error {
+  color: $error-color;
+}
+
+.link {
+  font-size: 11px;
+  color: $base-color;
+}

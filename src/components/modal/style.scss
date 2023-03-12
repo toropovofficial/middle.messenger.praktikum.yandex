@@ -1,0 +1,13 @@
+.modal {
+  &__wrapper {
+    min-width: 340px;
+    min-height: 257;
+    padding: 40px 36px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 2px 5px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+  }
+}

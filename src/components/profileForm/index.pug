@@ -1,0 +1,63 @@
+include ../input/input.pug
+include ../button/button.pug
+
+mixin yaProfileForm(status)
+  .profile__data__wrapper
+  if status == 'disabled'
+    .profile__data__item
+      p Почта
+      +yaInput('Почта', 'email', true, 'test@yandex.ru', 'rtl', 'email')
+    .profile__data__item
+      p Логин
+      +yaInput('Логин', 'text', true, 'Логин', 'rtl', 'login')
+    .profile__data__item
+      p Имя
+      +yaInput('Имя', 'text', true, 'Имя', 'rtl', 'first_name')
+    .profile__data__item
+      p Фамилия
+      +yaInput('Фамилия', 'text', true, 'Фамилия', 'rtl', 'second_name')
+    .profile__data__item
+      p Имя в чате
+      +yaInput('Имя в чате', 'text', true, 'Имя в чате', 'rtl', 'display_name')
+    .profile__data__item
+      p Телефон
+      +yaInput('Телефон', 'tel', true, 'Телефон', 'rtl', 'phone')
+
+  if status == 'active'
+    form(action='/viewProfile')
+      .profile__data__item
+        p Почта
+        +yaInput('Почта', 'email', false, 'test@yandex.ru', 'rtl', 'email')
+      .profile__data__item
+        p Логин
+        +yaInput('Логин', 'text', false, 'Логин', 'rtl', 'login')
+      .profile__data__item
+        p Имя
+        +yaInput('Имя', 'text', false, 'Имя', 'rtl', 'first_name')
+      .profile__data__item
+        p Фамилия
+        +yaInput('Фамилия', 'text', false, 'Фамилия', 'rtl', 'second_name')
+      .profile__data__item
+        p Имя в чате
+        +yaInput('Имя в чате', 'text', false, 'Имя в чате', 'rtl', 'display_name')
+      .profile__data__item
+        p Телефон
+        +yaInput('Телефон', 'tel', false, 'Телефон', 'rtl', 'phone')
+      .profile__actions
+        +yaButton('Сохранить', 'submit')
+      
+
+  if status == 'password'
+     form(action='/viewProfile')
+      .profile__data__item
+        p Старый пароль
+        +yaInput('Старый пароль', 'password', false, '123', 'rtl', 'oldPassword')
+      .profile__data__item
+        p Новый пароль
+        +yaInput('Новый пароль', 'password', false, '1234', 'rtl', 'newPassword')
+      .profile__data__item
+        p Повторите новый пароль
+        +yaInput('Повторите новый пароль', 'password', false, '12345', 'rtl', 'oldPassword')
+      .profile__actions
+        +yaButton('Сохранить', 'submit')
+      
