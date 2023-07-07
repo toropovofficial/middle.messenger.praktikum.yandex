@@ -12,13 +12,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run other command"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "./src/*.{js,jsx,ts,json}": [
-      "npm run test",
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "npm run prettier",
       "npm run lint",
       "git add"
     ]
