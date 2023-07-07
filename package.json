@@ -9,18 +9,8 @@
     "build": "webpack",
     "lint": "eslint . --ext .js,.ts",
     "lint:styles": "stylelint 'src/**/*.scss'",
-    "test": "mocha --require ts-node/register --require ./mochaSetup.js './src/**/*.test.ts'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx,json}": [
-      "npm run test",
-      "npm run lint"
-    ]
+    "test": "mocha --require ts-node/register --require ./mochaSetup.js './src/**/*.test.ts'",
+    "precommit": "npm run test"
   },
   "parcel-namer-struct": [
     {
