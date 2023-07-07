@@ -10,6 +10,12 @@
     "lint:styles": "stylelint 'src/**/*.scss'",
     "test": "mocha --require ts-node/register --require ./mochaSetup.js './src/**/*.test.ts'"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all test lint:all",
+      "pre-push": "npm run other command"
+    }
+  },
   "parcel-namer-struct": [
     {
       "type": [
@@ -38,6 +44,7 @@
     "eslint-plugin-react": "^7.32.2",
     "fs": "*",
     "fs-filesystem": "^2.1.2",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "jsdom-global": "3.0.2",
     "jstransformer-uglify-js": "^1.2.0",
