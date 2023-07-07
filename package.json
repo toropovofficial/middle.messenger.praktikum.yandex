@@ -32,7 +32,7 @@
     "eslint-plugin-react": "^7.32.2",
     "fs": "*",
     "fs-filesystem": "^2.1.2",
-    "husky": "^8.0.3",
+    "husky": "^4.3.8",
     "jsdom": "^22.1.0",
     "jsdom-global": "3.0.2",
     "jstransformer-uglify-js": "^1.2.0",
