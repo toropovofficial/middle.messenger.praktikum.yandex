@@ -16,7 +16,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx}": [
+    "src/**/*.{ts,tsx,js,jsx,json}": [
       "npm run prettier",
       "npm run lint",
       "git add"
