@@ -12,9 +12,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-test && npm-run-lint",
+      "pre-commit": "int-staged",
       "pre-push": "npm run other command"
     }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npm run test",
+      "npm run lint",
+      "git add"
+    ]
   },
   "parcel-namer-struct": [
     {
@@ -88,6 +95,7 @@
     "fs": "*",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
+    "lint-staged": "^13.2.3",
     "mini-css-extract-plugin": "^2.7.6",
     "mocha": "^10.2.0",
     "open-browser-webpack-plugin": "^0.0.5",
