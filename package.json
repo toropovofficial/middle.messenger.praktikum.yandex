@@ -10,11 +10,11 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:styles": "stylelint 'src/**/*.scss'",
     "test": "mocha --require ts-node/register --require ./mochaSetup.js './src/**/*.test.ts'",
-    "precommit": "npm run test",
+    "precommit": "lint-staged",
     "prepush": "npm test"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,json,scss}": [
+    "src/**/*.{tsjson,scss}": [
       "npm run test",
       "npm run lint"
     ]

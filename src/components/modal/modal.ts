@@ -31,7 +31,7 @@ class Modal extends Block {
   render() {
     const pathname = $router._currentRoute?._pathname;
     const showCloseIcon = !(pathname === '/sign-in' || pathname === '/sign-up');
-    console.log(123)
+    console.log(1223)
     return this.compile(template, { ...this.props, showCloseIcon });
   }
 }
