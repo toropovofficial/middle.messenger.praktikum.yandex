@@ -10,17 +10,9 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:styles": "stylelint 'src/**/*.scss'",
     "test": "mocha --require ts-node/register --require ./mochaSetup.js './src/**/*.test.ts'",
-    "precommit": "npm run test"
+    "precommit": "npm run test",
+    "prepush": "npm test"
   },
-  "parcel-namer-struct": [
-    {
-      "type": [
-        "scss",
-        "css"
-      ],
-      "dest": "/styles/"
-    }
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
