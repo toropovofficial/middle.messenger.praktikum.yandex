@@ -39,7 +39,7 @@
     "fs": "*",
     "fs-filesystem": "^2.1.2",
     "husky": "^8.0.3",
-		"lint-staged": "^13.1.0",
+		"lint-staged": "^13.2.3",
     "jsdom": "^22.1.0",
     "jsdom-global": "3.0.2",
     "jstransformer-uglify-js": "^1.2.0",
