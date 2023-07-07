@@ -13,6 +13,12 @@
     "precommit": "npm run test",
     "prepush": "npm test"
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,json,scss}": [
+      "npm run test",
+      "npm run lint"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -32,7 +38,8 @@
     "eslint-plugin-react": "^7.32.2",
     "fs": "*",
     "fs-filesystem": "^2.1.2",
-    "husky": "^4.3.8",
+    "husky": "^8.0.3",
+		"lint-staged": "^13.1.0",
     "jsdom": "^22.1.0",
     "jsdom-global": "3.0.2",
     "jstransformer-uglify-js": "^1.2.0",
@@ -76,7 +83,6 @@
     "fs": "*",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
-    "lint-staged": "^13.2.3",
     "mini-css-extract-plugin": "^2.7.6",
     "mocha": "^10.2.0",
     "open-browser-webpack-plugin": "^0.0.5",
