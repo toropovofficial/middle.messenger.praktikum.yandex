@@ -2,7 +2,6 @@ import template from './index.pug';
 import Block from '../../utils/block';
 import tabs from './const';
 import Tab from '../../components/tab/index';
-import './style.scss';
 
 export default class Tabs extends Block {
   constructor() {

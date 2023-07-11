@@ -1,6 +1,5 @@
 import template from './index.pug';
 import Block from '../../utils/block';
-import './style.scss';
 
 interface ITab {
   name?: string

@@ -3,7 +3,6 @@ import Block from '../../utils/block';
 import FieldNew from '../profileField/index';
 import Button from '../../components/newButton/index';
 import ErrorMessage from '../../components/error/index';
-import './style.scss';
 import { IInputItem } from '../../pages/interfaces/index';
 import { store } from '../../utils/Store';
 

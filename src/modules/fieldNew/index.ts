@@ -4,7 +4,6 @@ import Input from '../../components/newInput/index';
 import Icon from '../../components/newIcon/index';
 import ErrorMessage from '../../components/error/index';
 import validation from '../../utils/validation';
-import './style.scss';
 import { IInputItem } from '../../pages/interfaces/index';
 
 export default class Field extends Block {

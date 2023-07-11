@@ -12,7 +12,6 @@ import { store } from '../../utils/Store';
 import Modal from '../../components/modal/modal';
 import ChatsList from '../../modules/Chats/index';
 import ChatController from '../../controllers/ChatController';
-import './style.scss';
 import { IActiveChat, IChat } from '../../utils/interfaces';
 
 export default class MessengerPage extends Block {

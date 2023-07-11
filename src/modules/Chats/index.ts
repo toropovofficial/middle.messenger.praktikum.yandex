@@ -2,7 +2,6 @@ import template from './index.pug';
 import Block from '../../utils/block';
 import { withStore } from '../../utils/Store';
 import image from '../../../static/icons/avatar.jpg';
-import './style.scss';
 
 class Chats extends Block {
   constructor(props: any) {

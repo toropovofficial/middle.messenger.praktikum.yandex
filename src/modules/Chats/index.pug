@@ -1,17 +1,18 @@
-each val in chats
-  .item(id=val.id)
-    .item__data(id=val.id)
-      .item__image(id=val.id)
-        if val.avatar
-          img(src='https://ya-praktikum.tech/api/v2/resources/' + val.avatar id=val.id)
-        else 
-          img(src=src id=val.id)
-      .item__user(id=val.id)
-        .chat__name(id=val.id)=val.title
-        if val.last_message
-          .chat__message(id=val.id)=val.last_message.content
-    .item__info(id=val.id)
-      .created_date(id=val.id)
-        =val.created_by
-      .unread__messages(id=val.id)
-        =val.unread_count
+if chats 
+  each val in chats
+    .item(id=val.id)
+      .item__data(id=val.id)
+        .item__image(id=val.id)
+          if val.avatar
+            img(src='https://ya-praktikum.tech/api/v2/resources/' + val.avatar id=val.id)
+          else 
+            img(src=src id=val.id)
+        .item__user(id=val.id)
+          .chat__name(id=val.id)=val.title
+          if val.last_message
+            .chat__message(id=val.id)=val.last_message.content
+      .item__info(id=val.id)
+        .created_date(id=val.id)
+          =val.created_by
+        .unread__messages(id=val.id)
+          =val.unread_count

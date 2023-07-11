@@ -1,6 +1,5 @@
 import template from './index.pug';
 import Block from '../../utils/block';
-import './style.scss';
 import Field from '../fieldNew/index';
 import Button from '../../components/newButton/index';
 import ErrorMessage from '../../components/error/index';

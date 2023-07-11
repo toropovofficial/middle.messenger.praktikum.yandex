@@ -15,17 +15,18 @@
     "ecmaVersion": 6
   },
   "rules": {
-    "max-classes-per-file": [
-      "error",
-      { "ignoreExpressions": true, "max": 2 }
-    ],
     "max-len": ["error", { "code": 160 }],
     "no-empty-function": "off",
     "eslint @typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-explicit-any": ["off"],
     "no-unused-vars": ["off", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "class-methods-use-this": "off",
+    "max-classes-per-file": "off",
+    "camelcase": "off",
     "no-empty": "off",
+    "no-console": "off",
+    "no-useless-constructor": 0,
+    "no-unused-expressions": "off",
     "no-underscore-dangle": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-param-reassign": "off",
@@ -39,7 +40,6 @@
          "tsx": "never"
        }
     ],
-    "indent": ["error", 2],
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-useless-constructor": "off",

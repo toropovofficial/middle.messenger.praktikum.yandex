@@ -1,7 +1,6 @@
 import template from './index.pug';
 import Block from '../../utils/block';
 import Input from '../newInput/index';
-import './style.scss';
 
 interface IProps {
   label: string

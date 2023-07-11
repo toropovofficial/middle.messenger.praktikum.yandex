@@ -5,7 +5,6 @@ import Input from '../../components/newInput/index';
 import Icon from '../../components/icon/index';
 import arrow from '../../../static/icons/arrow.jpg';
 import Messages from '../../components/messages/index';
-import './style.scss';
 
 class Chat extends Block {
   [x: string]: any;
@@ -43,7 +42,7 @@ class Chat extends Block {
   }
 
   componentDidUpdate(props: Record<string, unknown>, newProps: Record<string, unknown>) {
-    const userId = store.state.user.data.id;
+    const userId = store.state.user.data?.id;
     const chatId = store.state.activeChat.id;
     const token = newProps && props.token !== newProps ? newProps : '';
 

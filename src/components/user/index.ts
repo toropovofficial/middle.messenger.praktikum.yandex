@@ -3,7 +3,6 @@ import Block from '../../utils/block';
 import Avatar from '../avatar/index';
 import Counter from '../counter/index';
 import Icon from '../icon/index';
-import './style.scss';
 import image from '../../../static/icons/admin.jpg';
 import settings from '../../../static/icons/settings.jpg';
 import notification from '../../../static/icons/notification.jpg';

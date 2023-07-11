@@ -1,11 +1,11 @@
-
-if messages.length
-    each val in messages
-        if id==val.user_id
-            .user__message.message
-                p=val.content
-        else 
-            .other__message.message
-                p=val.content
+if messages
+  if messages.length
+      each val in messages
+          if id==val.user_id
+              .user__message.message
+                  p=val.content
+          else 
+              .other__message.message
+                  p=val.content
 else 
     p.empty__list Список пуст

@@ -1,7 +1,5 @@
 import Block from '../../utils/block';
 
-import './style.scss';
-
 export default class Icon extends Block {
   constructor() {
     super('div', {});

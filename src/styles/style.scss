@@ -1,4 +1,32 @@
 @import './variables';
+@import '../components/Action/style';
+@import '../components/Actions/style';
+@import '../components/avatar/style';
+@import '../components/breadCrumbs/style';
+@import '../components/checkboxNew/style';
+@import '../components/counter/style';
+@import '../components/errorPage/style';
+@import '../components/FileUploader/style';
+@import '../components/icon/style';
+@import '../components/messages/style';
+@import '../components/modal/style';
+@import '../components/newButton/style';
+@import '../components/newIcon/style';
+@import '../components/newInput/style';
+@import '../components/search/style';
+@import '../components/tab/style';
+@import '../components/user/style';
+@import '../modules/Chat/style';
+@import '../modules/Chats/style';
+@import '../modules/fieldNew/style';
+@import '../modules/Form/style';
+@import '../modules/newProfileForm/style';
+@import '../modules/profileField/style';
+@import '../modules/tabs/style';
+@import '../pages/ChangePassword/style';
+@import '../pages/ChangeProfile/style';
+@import '../pages/Messenger/style';
+@import '../pages/Profile/style';
 
 body,
 html {

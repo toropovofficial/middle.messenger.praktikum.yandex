@@ -3,7 +3,6 @@ import Block from '../../utils/block';
 import add from '../../../static/icons/add.jpg';
 import remove from '../../../static/icons/remove.jpg';
 import Icon from '../icon/index';
-import './style.scss';
 
 interface IProps {
   events?: any

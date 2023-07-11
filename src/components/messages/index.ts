@@ -2,8 +2,6 @@ import Block from '../../utils/block';
 import template from './index.pug';
 import { withStore } from '../../utils/Store';
 
-import './style.scss';
-
 class Messages extends Block {
   constructor(props: any) {
     super('div', props);

@@ -3,7 +3,6 @@ import Block from '../../utils/block';
 import Input from '../../components/newInput/index';
 import ErrorMessage from '../../components/error/index';
 import validation from '../../utils/validation';
-import './style.scss';
 import { IInputItem } from '../../pages/interfaces/index';
 
 export default class Field extends Block {

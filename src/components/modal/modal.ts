@@ -3,7 +3,6 @@ import Block from '../../utils/block';
 import { withStore, store } from '../../utils/Store';
 import Icon from '../icon/index';
 import close from '../../../static/icons/close.png';
-import './style.scss';
 
 interface IProps {
   title: string
@@ -30,8 +29,9 @@ class Modal extends Block {
   }
 
   render() {
-    const pathname = $router._currentRoute._pathname;
+    const pathname = $router._currentRoute?._pathname;
     const showCloseIcon = !(pathname === '/sign-in' || pathname === '/sign-up');
+
     return this.compile(template, { ...this.props, showCloseIcon });
   }
 }

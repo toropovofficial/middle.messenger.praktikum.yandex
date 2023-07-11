@@ -2,7 +2,6 @@ import template from './index.pug';
 import Block from '../../utils/block';
 import Button from '../newButton/index';
 import Input from '../newInput/index';
-import './style.scss';
 
 interface IProps {
   text: string;

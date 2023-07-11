@@ -11,10 +11,10 @@ import AuthController from './controllers/AuthController';
 import ChatController from './controllers/ChatController';
 // eslint-disable-next-line import/extensions
 import { store } from './utils/Store';
+import './styles/style.scss';
 
 const initApp = async () => {
   const router = new Router('#root');
-
   router
     .use('/sign-in', LoginPage)
     .use('/sign-up', RegistartionPage)
@@ -35,17 +35,17 @@ const initApp = async () => {
     const path = document.location.pathname;
 
     switch (true) {
-    case path === '/':
-      router.go('/messenger');
-      break;
-    case path === '/sign-in':
-      router.go('/messenger');
-      break;
-    case path === '/sign-up':
-      router.go('/messenger');
-      break;
-    default:
-      break;
+      case path === '/':
+        router.go('/messenger');
+        break;
+      case path === '/sign-in':
+        router.go('/messenger');
+        break;
+      case path === '/sign-up':
+        router.go('/messenger');
+        break;
+      default:
+        break;
     }
   } catch (error) {
     store.set('showModal', true);

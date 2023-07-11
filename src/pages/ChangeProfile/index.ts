@@ -2,7 +2,6 @@ import template from './index.pug';
 import Block from '../../utils/block';
 import ProfileForm from '../../modules/newProfileForm/index';
 import { profileFields } from '../SignIn/const';
-import './style.scss';
 import { initEventSubmit } from '../../utils/helpers';
 import ProfileController from '../../controllers/ProfileController';
 import AuthController from '../../controllers/AuthController';
