@@ -42,7 +42,7 @@ class Chat extends Block {
   }
 
   componentDidUpdate(props: Record<string, unknown>, newProps: Record<string, unknown>) {
-    const userId = store.state.user.data.id;
+    const userId = store.state.user.data?.id;
     const chatId = store.state.activeChat.id;
     const token = newProps && props.token !== newProps ? newProps : '';
 

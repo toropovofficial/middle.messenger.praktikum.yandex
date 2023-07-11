@@ -1,5 +1,6 @@
 import template from './index.pug';
 import Block from '../../utils/block';
+
 interface IProps {
   src: string
   alt?: string

@@ -1,0 +1,49 @@
+
+{
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "max-len": ["error", { "code": 160 }],
+    "no-empty-function": "off",
+    "eslint @typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "no-unused-vars": ["off", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "class-methods-use-this": "off",
+    "max-classes-per-file": "off",
+    "camelcase": "off",
+    "no-empty": "off",
+    "no-console": "off",
+    "no-useless-constructor": 0,
+    "no-unused-expressions": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-param-reassign": "off",
+    "import/extensions": [
+       "error",
+       "ignorePackages",
+       {
+         "js": "never",
+         "jsx": "never",
+         "ts": "never",
+         "tsx": "never"
+       }
+    ],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-useless-constructor": "off",
+    "no-shadow": "off",
+    "arrow-body-style": ["error", "always"]
+ }
+}

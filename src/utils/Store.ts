@@ -67,7 +67,6 @@ class Store extends EventBus {
     try {
       this.emit(StoreEvents.Updated, this.state);
     } catch (error) {
-      // console.log(error)
     }
   }
 

@@ -4,6 +4,7 @@ const isEqual = (lhs: any, rhs: any) => {
 
 function render(query: any, block: { getContent: () => any }) {
   const root = document.querySelector(query);
+  root.innerText = '';
 
   root.append(block.getContent());
   return root;

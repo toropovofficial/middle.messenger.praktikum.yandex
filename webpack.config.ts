@@ -1,26 +1,26 @@
-const path = require('path');
-const PugPlugin = require('pug-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const PugPlugin = require('pug-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.ts',
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
-      filename: 'index.js'
+  mode: 'development',
+  entry: './src/index.ts',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'index.js',
   },
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-},
-    resolve: {
-        extensions: ['.ts', '.js', '.json', 'scss']
+    maxAssetSize: 512000,
+  },
+  resolve: {
+    extensions: ['.ts', '.js', '.json', 'scss'],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -31,63 +31,63 @@ module.exports = {
       template: './static/index.html',
       filename: 'index.html',
       minify: {
-      collapseWhitespace: true,
-      removeComments: true,
-      removeRedundantAttributes: true,
-      useShortDoctype: true,
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
       },
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
-    module: {
-        rules: [
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-typescript', '@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.pug$/,
+        oneOf: [
           {
-            test: /\.ts$/,
-            use: {
-              loader: "babel-loader",
-              options: {
-                presets: ["@babel/preset-typescript", "@babel/preset-env"],
-              },
+            issuer: /\.(js|ts)$/,
+            loader: PugPlugin.loader,
+            options: {
+              method: 'compile',
             },
           },
           {
-            test: /\.pug$/,
-            oneOf: [
-              {
-                issuer: /\.(js|ts)$/,
-                loader: PugPlugin.loader,
-                options: {
-                  method: 'compile',
-                },
-              },
-              {
-                loader: PugPlugin.loader,
-              },
-            ],
+            loader: PugPlugin.loader,
           },
-        {
-          test: /\.(png|jpg|jpeg|ico)/,
-          type: 'asset/resource',
-          generator: {
-            filename: 'assets/img/[name].[hash:8][ext]'
-          }
+        ],
+      },
+      {
+        test: /\.(png|jpg|jpeg|ico)/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[name].[hash:8][ext]',
         },
-        {
-          test: /\.scss$/,
-          exclude: /node_modules/,
-          use: [
-            {
-              loader: "file-loader",
-              options: { outputPath: "css/", name: "[name].min.css" },
-            },
-            "sass-loader",
-          ],
-        },
-        
-      ],
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { outputPath: 'css/', name: '[name].min.css' },
+          },
+          'sass-loader',
+        ],
+      },
+
+    ],
   },
   devServer: {
     static: {
@@ -95,6 +95,6 @@ module.exports = {
     },
     historyApiFallback: true,
     compress: true,
-    port: 4000,
+    port: 3001,
   },
 };

@@ -3,12 +3,12 @@ import sinon from 'sinon';
 import Route from './Router';
 
 describe('Router', () => {
-  const content = sinon.fake.returns(document.createElement('div'))()
+  const content = sinon.fake.returns(document.createElement('div'))();
   const blockMock = class {
     getContent() {
-      return content
+      return content;
     }
-  }
+  };
 
   it('should create route', () => {
     const signIn = 'sign-in';
@@ -28,7 +28,6 @@ describe('Router', () => {
     router.start();
     router.go(signIn);
 
-
-    expect(router._currentRoute._pathname).to.be.eq(signIn)
+    expect(router._currentRoute._pathname).to.be.eq(signIn);
   });
 });
